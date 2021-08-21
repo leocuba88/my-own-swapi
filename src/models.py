@@ -60,7 +60,7 @@ class Planets(db.Model):
     edited = db.Column(db.String(250), unique=True, nullable=False)
 
     def __repr__(self):
-        return '<Planets %r>' % self.name
+        return f'<Planets {self.name}-{self.id}> '
 
     def serialize(self):
         return {
